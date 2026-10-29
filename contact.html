@@ -73,7 +73,7 @@
     <h2>聯絡我們</h2>
     <p>歡迎詢問登山行程、團體活動與合作資訊。</p>
 
-    <form id="contactForm">
+    <<form action="https://formsubmit.co/alex50115017@gmail.com" method="POST">>
       <label for="name">客戶姓名 *</label>
       <input id="name" name="name" autocomplete="name" required>
 
@@ -97,14 +97,5 @@
   <footer>
     <p>山林涼登山隊｜探索山林・安全同行</p>
   </footer>
-
-  <script>
-    document.getElementById("contactForm")
-      .addEventListener("submit", function(event) {
-        event.preventDefault();
-        document.getElementById("result").textContent =
-          "目前表單僅供展示，資料尚未寄出。";
-      });
-  </script>
 </body>
 </html>
