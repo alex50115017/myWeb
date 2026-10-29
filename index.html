@@ -3,74 +3,91 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>山林涼登山隊｜首頁</title>
-  <meta name="description" content="山林涼登山隊，提供登山活動、行程規劃與戶外探索資訊。">
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #26352d;
+      line-height: 1.8;
+    }
+    header, footer {
+      padding: 20px;
+      text-align: center;
+      color: white;
+      background: #203d30;
+    }
+    nav a {
+      color: white;
+      margin: 0 12px;
+    }
+    .hero {
+      padding: 85px 20px;
+      text-align: center;
+      color: white;
+      background: linear-gradient(135deg, #203d30, #78966a);
+    }
+    .hero h2 { font-size: 2.5rem; }
+    .content {
+      max-width: 900px;
+      margin: auto;
+      padding: 35px 24px;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 6px;
+      background: #e2edcf;
+      color: #203d30;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    @media (max-width: 600px) {
+      .hero h2 { font-size: 2rem; }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <a class="logo" href="index.html">山林涼登山隊</a>
+  <header>
+    <h1>山林涼登山隊</h1>
     <nav>
       <a href="index.html">首頁</a>
       <a href="contact.html">聯絡我們</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">EXPLORE THE MOUNTAINS</p>
-        <h1>走進山林<br>探索無限可能</h1>
-        <p>
-          與志同道合的夥伴一起出發，
-          感受台灣山林的壯闊與自然之美。
-        </p>
-        <a class="btn" href="contact.html">聯絡我們</a>
-      </div>
-    </section>
+  <section class="hero">
+    <h2>走進山林，探索無限可能</h2>
+    <p>探索山林・挑戰自我・安全同行</p>
+    <a class="button" href="contact.html">聯絡我們</a>
+  </section>
 
-    <section class="section">
-      <h2>關於我們</h2>
-      <p class="section-intro">
-        山林涼登山隊致力於推廣登山活動與戶外生活。
-        我們重視行程規劃、團隊合作與登山安全，
-        希望讓更多人認識台灣山林，享受親近自然的樂趣。
-      </p>
-    </section>
+  <section class="content">
+    <h2>關於我們</h2>
+    <p>
+      山林涼登山隊致力於推廣登山活動與戶外生活，
+      重視行程規劃、團隊合作及登山安全，
+      陪伴登山愛好者認識台灣山林之美。
+    </p>
 
-    <section class="section services">
-      <h2>我們的服務</h2>
-      <div class="cards">
-        <article class="service-card">
-          <div class="service-icon">01</div>
-          <h3>登山行程規劃</h3>
-          <p>依照活動目標與參與者程度，規劃適合的登山行程。</p>
-        </article>
+    <h2>我們的服務</h2>
+    <h3>登山行程規劃</h3>
+    <p>依照參與者程度與活動目標規劃登山行程。</p>
 
-        <article class="service-card">
-          <div class="service-icon">02</div>
-          <h3>團體登山活動</h3>
-          <p>透過團隊合作與戶外體驗，建立交流與共同回憶。</p>
-        </article>
+    <h3>團體登山活動</h3>
+    <p>透過戶外活動促進團隊交流與合作。</p>
 
-        <article class="service-card">
-          <div class="service-icon">03</div>
-          <h3>安全與裝備準備</h3>
-          <p>重視行前準備、裝備檢查、天候資訊與風險評估。</p>
-        </article>
-      </div>
-    </section>
+    <h3>登山安全與裝備</h3>
+    <p>重視行前準備、裝備檢查與天候風險評估。</p>
 
-    <section class="mountain-section">
-      <h2>每一步，都是新的風景</h2>
-      <p>準備好與我們一起探索山林了嗎？</p>
-      <a class="btn btn-light" href="contact.html">立即聯絡我們</a>
-    </section>
-  </main>
+    <h2>與我們聯絡</h2>
+    <p>歡迎詢問登山活動、行程安排及合作資訊。</p>
+    <a class="button" href="contact.html">前往聯絡我們</a>
+  </section>
 
   <footer>
-    <p>© 山林涼登山隊｜探索山林・安全同行</p>
+    <p>山林涼登山隊｜探索山林・安全同行</p>
   </footer>
 </body>
 </html>
