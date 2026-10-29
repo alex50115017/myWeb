@@ -5,49 +5,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>聯絡我們｜山林涼登山隊</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, "Noto Sans TC", sans-serif;
+      color: #26352d;
+      background: #f3f6f0;
+      line-height: 1.8;
+    }
+    header, footer {
+      padding: 20px;
+      text-align: center;
+      color: white;
+      background: #203d30;
+    }
+    nav a {
+      color: white;
+      margin: 0 12px;
+    }
+    main {
+      max-width: 680px;
+      margin: 35px auto;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+    }
+    label {
+      display: block;
+      margin-top: 18px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #b8c6b9;
+      border-radius: 6px;
+      font: inherit;
+    }
+    button {
+      width: 100%;
+      margin-top: 24px;
+      padding: 14px;
+      color: white;
+      background: #2e5a40;
+      border: 0;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover { background: #203d30; }
+    @media (max-width: 700px) {
+      main { margin: 16px; padding: 20px; }
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <a class="logo" href="index.html">山林涼登山隊</a>
-    <nav>
-      <a href="index.html">首頁</a>
-      <a href="contact.html">聯絡我們</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="page-banner">
-      <h1>聯絡我們</h1>
-      <p>有登山行程或團隊活動的問題嗎？歡迎與我們聯絡。</p>
-    </section>
+<header>
+  <h1>山林涼登山隊</h1>
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="contact.html">聯絡我們</a>
+  </nav>
+</header>
 
-    <section class="contact-section">
-      <h2>客戶聯絡表單</h2>
-      <p>請填寫以下資料，我們將依您留下的聯絡方式回覆。</p>
+<main>
+  <h2>聯絡我們</h2>
+  <p>歡迎詢問登山行程、團體活動與合作資訊。</p>
 
-      <div class="form-container">
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLScMEhqX8THRGsyiQVbB54zX8Yx5nTu2H1JBDN_EBILuNqEFtg/viewform?usp=header"
-          title="山林涼登山隊客戶聯絡表單"
-          width="100%"
-          height="850"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0">
-          載入表單中……
-        </iframe>
-      </div>
+  <form
+    action="https://formsubmit.co/alex50115017@gmail.com"
+    method="POST">
 
-      <p class="privacy-note">
-        您提供的資料僅供本團隊處理聯絡需求使用，
-        請勿填寫與聯絡無關的敏感資訊。
-      </p>
-    </section>
-  </main>
+    <input type="hidden" name="_subject"
+      value="山林涼登山隊：收到新的客戶聯絡資料">
 
-  <footer>
-    <p>© 山林涼登山隊｜探索山林・安全同行</p>
-  </footer>
+    <input type="hidden" name="_template" value="table">
+
+    <input type="hidden" name="_captcha" value="true">
+
+    <label for="name">客戶姓名 *</label>
+    <input type="text" id="name" name="姓名"
+      placeholder="請輸入您的姓名" required>
+
+    <label for="phone">聯絡電話 *</label>
+    <input type="tel" id="phone" name="電話"
+      placeholder="例如：0912345678" required>
+
+    <label for="email">Email 電子郵件 *</label>
+    <input type="email" id="email" name="email"
+      placeholder="請輸入有效的 Email" required>
+
+    <label for="message">聯絡內容 *</label>
+    <textarea id="message" name="聯絡內容"
+      rows="6" placeholder="請輸入您的問題或需求"
+      required></textarea>
+
+    <button type="submit">送出聯絡資料</button>
+  </form>
+
+  <p>
+    您提供的資料將用於處理本次聯絡需求，
+    請勿填寫與聯絡無關的敏感資訊。
+  </p>
+</main>
+
+<footer>
+  <p>山林涼登山隊｜探索山林・安全同行</p>
+</footer>
+
 </body>
 </html>
