@@ -4,120 +4,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>山林戶外用品店</title>
-  <style>
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: Arial, "Noto Sans TC", sans-serif;
-      color: #26352b;
-      background: #f5f7f2;
-      line-height: 1.7;
-    }
-
-    header {
-      background: #244b37;
-      color: white;
-      padding: 22px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    header h1 { margin: 0; font-size: 24px; }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 18px;
-    }
-
-    .hero {
-      padding: 80px 20px;
-      text-align: center;
-      color: white;
-      background: linear-gradient(135deg, #315e42, #91a77a);
-    }
-
-    .hero h2 { font-size: clamp(30px, 5vw, 48px); margin: 0 0 12px; }
-    .hero p { font-size: 18px; }
-
-    .products {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 3px 12px #00000010;
-    }
-
-    .card .emoji { font-size: 42px; }
-    .card h3 { margin-bottom: 8px; }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #244b37;
-      color: white;
-    }
-
-    @media (max-width: 600px) {
-      header { justify-content: center; text-align: center; }
-      nav a { margin: 0 8px; }
-      .hero { padding: 55px 18px; }
-    }
-  </style>
+  <title>山林涼登山隊｜首頁</title>
+  <meta name="description" content="山林涼登山隊，提供登山活動、行程規劃與戶外探索資訊。">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>山林戶外用品店</h1>
+  <header class="site-header">
+    <a class="logo" href="index.html">山林涼登山隊</a>
     <nav>
-      <a href="#home">首頁</a>
-      <a href="#products">商品介紹</a>
+      <a href="index.html">首頁</a>
+      <a href="contact.html">聯絡我們</a>
     </nav>
   </header>
 
-  <section class="hero" id="home">
-    <h2>探索山林，享受戶外</h2>
-    <p>準備好裝備，出發尋找屬於你的風景。</p>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">EXPLORE THE MOUNTAINS</p>
+        <h1>走進山林<br>探索無限可能</h1>
+        <p>
+          與志同道合的夥伴一起出發，
+          感受台灣山林的壯闊與自然之美。
+        </p>
+        <a class="btn" href="contact.html">聯絡我們</a>
+      </div>
+    </section>
 
-  <main class="products" id="products">
-    <h2>戶外裝備推薦</h2>
-    <div class="cards">
-      <article class="card">
-        <div class="emoji">🎒</div>
-        <h3>登山背包</h3>
-        <p>收納登山必需品，讓每一趟旅程更加便利。</p>
-      </article>
-      <article class="card">
-        <div class="emoji">⛺</div>
-        <h3>露營帳篷</h3>
-        <p>打造舒適的戶外休息空間，享受自然生活。</p>
-      </article>
-      <article class="card">
-        <div class="emoji">🥾</div>
-        <h3>登山鞋</h3>
-        <p>為山徑旅程做好準備，踏出每一步。</p>
-      </article>
-    </div>
+    <section class="section">
+      <h2>關於我們</h2>
+      <p class="section-intro">
+        山林涼登山隊致力於推廣登山活動與戶外生活。
+        我們重視行程規劃、團隊合作與登山安全，
+        希望讓更多人認識台灣山林，享受親近自然的樂趣。
+      </p>
+    </section>
+
+    <section class="section services">
+      <h2>我們的服務</h2>
+      <div class="cards">
+        <article class="service-card">
+          <div class="service-icon">01</div>
+          <h3>登山行程規劃</h3>
+          <p>依照活動目標與參與者程度，規劃適合的登山行程。</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">02</div>
+          <h3>團體登山活動</h3>
+          <p>透過團隊合作與戶外體驗，建立交流與共同回憶。</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">03</div>
+          <h3>安全與裝備準備</h3>
+          <p>重視行前準備、裝備檢查、天候資訊與風險評估。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="mountain-section">
+      <h2>每一步，都是新的風景</h2>
+      <p>準備好與我們一起探索山林了嗎？</p>
+      <a class="btn btn-light" href="contact.html">立即聯絡我們</a>
+    </section>
   </main>
 
   <footer>
-    <p>山林戶外用品店｜探索自然，安全出發</p>
+    <p>© 山林涼登山隊｜探索山林・安全同行</p>
   </footer>
 </body>
 </html>
