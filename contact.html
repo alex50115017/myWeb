@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>聯絡我們｜山林涼登山隊</title>
+
   <style>
     body {
       margin: 0;
@@ -13,16 +14,19 @@
       background: #f3f6f0;
       line-height: 1.8;
     }
+
     header, footer {
       background: #203d30;
       color: white;
       padding: 20px;
       text-align: center;
     }
+
     nav a {
       color: white;
       margin: 0 12px;
     }
+
     main {
       max-width: 650px;
       margin: 30px auto;
@@ -30,11 +34,13 @@
       background: white;
       border-radius: 12px;
     }
+
     label {
       display: block;
       margin-top: 18px;
       font-weight: bold;
     }
+
     input, textarea {
       box-sizing: border-box;
       width: 100%;
@@ -44,6 +50,7 @@
       border-radius: 6px;
       font: inherit;
     }
+
     button {
       width: 100%;
       margin-top: 24px;
@@ -55,12 +62,22 @@
       font-size: 16px;
       cursor: pointer;
     }
+
+    button:hover {
+      background: #203d30;
+    }
+
     @media (max-width: 700px) {
-      main { margin: 16px; padding: 20px; }
+      main {
+        margin: 16px;
+        padding: 20px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <header>
     <h1>山林涼登山隊</h1>
     <nav>
@@ -71,31 +88,68 @@
 
   <main>
     <h2>聯絡我們</h2>
-    <p>歡迎詢問登山行程、團體活動與合作資訊。</p>
 
-    <<form action="https://formsubmit.co/alex50115017@gmail.com" method="POST">>
+    <p>
+      歡迎詢問登山行程、團體活動與合作資訊。
+      請填寫以下資料，我們將盡快與您聯繫。
+    </p>
+
+    <form
+      action="https://formsubmit.co/alex50115017@gmail.com"
+      method="POST"
+    >
+
+      <input type="hidden" name="_subject"
+        value="山林涼登山隊：新的客戶聯絡資料">
+
+      <input type="hidden" name="_template"
+        value="table">
+
       <label for="name">客戶姓名 *</label>
-      <input id="name" name="name" autocomplete="name" required>
+      <input
+        id="name"
+        type="text"
+        name="姓名"
+        autocomplete="name"
+        required
+      >
 
       <label for="phone">聯絡電話 *</label>
-      <input id="phone" name="phone" type="tel"
-        autocomplete="tel" required>
+      <input
+        id="phone"
+        type="tel"
+        name="電話"
+        autocomplete="tel"
+        required
+      >
 
       <label for="email">Email *</label>
-      <input id="email" name="email" type="email"
-        autocomplete="email" required>
+      <input
+        id="email"
+        type="email"
+        name="客戶Email"
+        autocomplete="email"
+        required
+      >
 
       <label for="message">聯絡內容 *</label>
-      <textarea id="message" name="message"
-        rows="6" required></textarea>
+      <textarea
+        id="message"
+        name="聯絡內容"
+        rows="6"
+        required
+      ></textarea>
 
-      <button type="submit">送出聯絡資料</button>
-      <p id="result" role="status"></p>
+      <button type="submit">
+        送出聯絡資料
+      </button>
+
     </form>
   </main>
 
   <footer>
     <p>山林涼登山隊｜探索山林・安全同行</p>
   </footer>
+
 </body>
 </html>
