@@ -10,26 +10,27 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: #26352d;
       background: #f3f6f0;
+      color: #26352d;
       line-height: 1.8;
     }
 
     header, footer {
       background: #203d30;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 20px;
     }
 
     nav a {
       color: white;
-      margin: 0 12px;
+      margin: 10px;
+      text-decoration: none;
     }
 
     main {
       max-width: 650px;
-      margin: 30px auto;
+      margin: 40px auto;
       padding: 25px;
       background: white;
       border-radius: 12px;
@@ -42,21 +43,25 @@
     }
 
     input, textarea {
-      box-sizing: border-box;
       width: 100%;
       padding: 12px;
       margin-top: 6px;
-      border: 1px solid #b8c6b9;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
       border-radius: 6px;
-      font: inherit;
+      font-size: 16px;
+    }
+
+    textarea {
+      height: 150px;
+      resize: vertical;
     }
 
     button {
-      width: 100%;
-      margin-top: 24px;
-      padding: 14px;
+      margin-top: 25px;
+      padding: 12px 30px;
+      background: #203d30;
       color: white;
-      background: #2e5a40;
       border: none;
       border-radius: 6px;
       font-size: 16px;
@@ -64,92 +69,97 @@
     }
 
     button:hover {
-      background: #203d30;
-    }
-
-    @media (max-width: 700px) {
-      main {
-        margin: 16px;
-        padding: 20px;
-      }
+      background: #365b46;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>山林涼登山隊</h1>
-    <nav>
-      <a href="index.html">首頁</a>
-      <a href="contact.html">聯絡我們</a>
-    </nav>
-  </header>
+<header>
+  <h1>山林涼登山隊</h1>
 
-  <main>
-    <h2>聯絡我們</h2>
+  <nav>
+    <a href="index.html">首頁</a>
+    <a href="about.html">團隊介紹</a>
+    <a href="contact.html">聯絡我們</a>
+  </nav>
+</header>
 
-    <p>
-      歡迎詢問登山行程、團體活動與合作資訊。
-      請填寫以下資料，我們將盡快與您聯繫。
-    </p>
+<main>
+  <h2>聯絡我們</h2>
 
-    <form
-      action="https://formsubmit.co/alex50115017@gmail.com"
-      method="POST"
+  <p>
+    如果您對登山活動有興趣，
+    歡迎填寫以下資料與我們聯絡。
+  </p>
+
+  <form
+    action="https://formsubmit.co/alex50115017@gmail.com"
+    method="POST"
+  >
+
+    <input
+      type="hidden"
+      name="_subject"
+      value="山林涼登山隊｜網站聯絡表單"
     >
 
-      <input type="hidden" name="_subject"
-        value="山林涼登山隊：新的客戶聯絡資料">
+    <input
+      type="hidden"
+      name="_url"
+      value="https://alex50115017.github.io/myWeb/contact.html"
+    >
 
-      <input type="hidden" name="_template"
-        value="table">
+    <input
+      type="hidden"
+      name="_template"
+      value="table"
+    >
 
-      <label for="name">客戶姓名 *</label>
-      <input
-        id="name"
-        type="text"
-        name="姓名"
-        autocomplete="name"
-        required
-      >
+    <label for="name">客戶姓名</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="請輸入您的姓名"
+      required
+    >
 
-      <label for="phone">聯絡電話 *</label>
-      <input
-        id="phone"
-        type="tel"
-        name="電話"
-        autocomplete="tel"
-        required
-      >
+    <label for="phone">電話</label>
+    <input
+      type="tel"
+      id="phone"
+      name="phone"
+      placeholder="請輸入您的電話"
+      required
+    >
 
-      <label for="email">Email *</label>
-      <input
-        id="email"
-        type="email"
-        name="客戶Email"
-        autocomplete="email"
-        required
-      >
+    <label for="email">Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="請輸入您的電子郵件"
+      required
+    >
 
-      <label for="message">聯絡內容 *</label>
-      <textarea
-        id="message"
-        name="聯絡內容"
-        rows="6"
-        required
-      ></textarea>
+    <label for="message">聯絡內容</label>
+    <textarea
+      id="message"
+      name="message"
+      placeholder="請輸入您想詢問的內容"
+      required
+    ></textarea>
 
-      <button type="submit">
-        送出聯絡資料
-      </button>
+    <button type="submit">送出表單</button>
 
-    </form>
-  </main>
+  </form>
+</main>
 
-  <footer>
-    <p>山林涼登山隊｜探索山林・安全同行</p>
-  </footer>
+<footer>
+  <p>© 山林涼登山隊</p>
+</footer>
 
 </body>
 </html>
