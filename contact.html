@@ -1,12 +1,18 @@
 
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>聯絡我們｜山林涼登山隊</title>
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -22,18 +28,44 @@
       padding: 20px;
     }
 
+    header h1 {
+      margin-top: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
     nav a {
       color: white;
-      margin: 10px;
       text-decoration: none;
     }
 
+    nav a:hover {
+      color: #b9d8b7;
+    }
+
     main {
+      width: 90%;
       max-width: 650px;
       margin: 40px auto;
-      padding: 25px;
+      padding: 30px;
       background: white;
       border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #203d30;
+      text-align: center;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 25px;
     }
 
     label {
@@ -46,10 +78,15 @@
       width: 100%;
       padding: 12px;
       margin-top: 6px;
-      box-sizing: border-box;
       border: 1px solid #ccc;
       border-radius: 6px;
       font-size: 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    input:focus, textarea:focus {
+      outline: 2px solid #72947c;
+      border-color: #203d30;
     }
 
     textarea {
@@ -58,98 +95,154 @@
     }
 
     button {
+      display: block;
+      width: 100%;
       margin-top: 25px;
-      padding: 12px 30px;
+      padding: 14px;
       background: #203d30;
       color: white;
       border: none;
       border-radius: 6px;
-      font-size: 16px;
+      font-size: 17px;
       cursor: pointer;
     }
 
     button:hover {
       background: #365b46;
     }
+
+    .privacy {
+      font-size: 13px;
+      color: #66736a;
+      margin-top: 15px;
+    }
+
+    footer {
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 20px auto;
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 24px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>山林涼登山隊</h1>
+  <!-- 網站標題與導覽列 -->
+  <header>
 
-  <nav>
-    <a href="index.html">首頁</a>
-    <a href="about.html">團隊介紹</a>
-    <a href="contact.html">聯絡我們</a>
-  </nav>
-</header>
+    <h1>山林涼登山隊</h1>
 
-<main>
-  <h2>聯絡我們</h2>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="about.html">團隊介紹</a>
+      <a href="contact.html">聯絡我們</a>
+    </nav>
 
-  <p>
-    如果您對登山活動有興趣，
-    歡迎填寫以下資料與我們聯絡。
-  </p>
+  </header>
 
- <form
-  action="https://formsubmit.co/alex50115017@gmail.com"
-  method="POST"
->
 
-    <input
-      type="hidden"
-      name="_subject"
-      value="山林涼登山隊｜網站聯絡表單"
+  <!-- 聯絡表單 -->
+  <main>
+
+    <h2>聯絡我們</h2>
+
+    <p class="intro">
+      如果您對登山活動有興趣，
+      歡迎填寫以下資料與我們聯絡。
+      我們將盡快回覆您。
+    </p>
+
+
+    <!-- Formspree 表單設定 -->
+    <form
+      action="https://formspree.io/f/xzeewbpj"
+      method="POST"
     >
 
-  
+      <!-- Email 主旨 -->
+      <input
+        type="hidden"
+        name="_subject"
+        value="山林涼登山隊｜網站聯絡表單"
+      >
 
-    <label for="name">客戶姓名</label>
-    <input
-      type="text"
-      id="name"
-      name="name"
-      placeholder="請輸入您的姓名"
-      required
-    >
 
-    <label for="phone">電話</label>
-    <input
-      type="tel"
-      id="phone"
-      name="phone"
-      placeholder="請輸入您的電話"
-      required
-    >
+      <!-- 客戶姓名 -->
+      <label for="name">客戶姓名</label>
 
-    <label for="email">Email</label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      placeholder="請輸入您的電子郵件"
-      required
-    >
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="請輸入您的姓名"
+        required
+      >
 
-    <label for="message">聯絡內容</label>
-    <textarea
-      id="message"
-      name="message"
-      placeholder="請輸入您想詢問的內容"
-      required
-    ></textarea>
 
-    <button type="submit">送出表單</button>
+      <!-- 電話 -->
+      <label for="phone">電話</label>
 
-  </form>
-</main>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="請輸入您的電話"
+        required
+      >
 
-<footer>
-  <p>© 山林涼登山隊</p>
-</footer>
+
+      <!-- Email -->
+      <label for="email">Email</label>
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="請輸入您的電子郵件"
+        required
+      >
+
+
+      <!-- 聯絡內容 -->
+      <label for="message">聯絡內容</label>
+
+      <textarea
+        id="message"
+        name="message"
+        placeholder="請輸入您想詢問的內容"
+        required
+      ></textarea>
+
+
+      <!-- 送出按鈕 -->
+      <button type="submit">
+        送出表單
+      </button>
+
+      <p class="privacy">
+        您所提供的資料僅供山林涼登山隊聯絡及活動諮詢使用。
+      </p>
+
+    </form>
+
+  </main>
+
+
+  <!-- 頁尾 -->
+  <footer>
+
+    <p>© 山林涼登山隊</p>
+
+  </footer>
 
 </body>
 </html>
